@@ -1,13 +1,13 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Food = void 0;
-class Food {
-    constructor(_type, _storage) {
-        this.type = _type;
-        this.storage = _storage;
+var Farm;
+(function (Farm) {
+    class Food {
+        constructor(_type, _storage) {
+            this.type = _type;
+            this.storage = _storage;
+        }
+        checkStock() {
+        }
     }
-    checkStock() {
-    }
-}
-exports.Food = Food;
-//# sourceMappingURL=Food.js.map
+    Farm.Food = Food;
+})(Farm || (Farm = {}));
