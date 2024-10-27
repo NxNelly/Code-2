@@ -6,7 +6,9 @@ var Farm;
             this.type = _type;
             this.storage = _storage;
         }
-        checkStock() {
+        update(_currentConsumption) {
+            const newStorage = this.storage - _currentConsumption;
+            return newStorage;
         }
     }
     Farm.Food = Food;

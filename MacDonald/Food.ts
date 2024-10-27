@@ -1,14 +1,16 @@
 namespace Farm {
     export class Food {
-        type: string;
-        storage: number;
+        public type: string;
+        public storage: number;
 
         constructor(_type: string, _storage: number) {
             this.type = _type;
             this.storage = _storage;
         }
 
-        checkStock(): void {
+        update(_currentConsumption: number): number {
+            const newStorage: number = this.storage - _currentConsumption;
+            return newStorage;
 
         }
     }

@@ -13,10 +13,12 @@ var Farm;
             console.log(this.name, this.sound = this.sound);
         }
         eat() {
-            //const d: HTMLElement = document.getElementById("div");
-            //const p: HTMLElement = document.createElement("p");
-            //p.textContent = this.food;
-            //d?.appendChild(p);s
+            const d = document.getElementById("eat");
+            const p = document.createElement("p");
+            p.textContent = this.name + " the " + this.type + " is eating " + this.consumption + " units of " + this.food;
+            //p.textContent = " Food left in storage : ";// move to main
+            d === null || d === void 0 ? void 0 : d.appendChild(p);
+            return [this.food, this.consumption];
         }
     }
     Farm.Animal = Animal;
