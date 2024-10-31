@@ -7,7 +7,7 @@ var Farm;
             this.storage = _storage;
         }
         update(_currentConsumption) {
-            const newStorage = this.storage - _currentConsumption;
+            let newStorage = this.storage - _currentConsumption;
             return newStorage;
         }
     }

@@ -9,7 +9,7 @@ namespace Farm {
         }
 
         update(_currentConsumption: number): number {
-            const newStorage: number = this.storage - _currentConsumption;
+            let newStorage: number = this.storage - _currentConsumption;
             return newStorage;
 
         }

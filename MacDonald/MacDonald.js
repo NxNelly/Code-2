@@ -14,20 +14,22 @@ var Farm;
         animals.push(new Farm.Animal("Rosa", "cat", "meow", "meat", 3));
         animals.push(new Farm.Animal("Patrick", "pig", "oink", "grain", 6));
         animals.push(new Farm.Animal("Terry", "pig", "oink", "grain", 6));
-        const foods = [];
+        let foods = [];
         foods.push(new Farm.Food("grass", 50));
         foods.push(new Farm.Food("meat", 50));
         foods.push(new Farm.Food("grain", 50));
         for (let i = 0; i < animals.length; i++) {
             console.log(animals[i]);
+            animals[i].sing();
             const info = animals[i].eat();
             //const currentFood: string = info[0];
             const currentConsumption = info[1];
             const d = document.getElementById("eat");
             const p = document.createElement("p"); //take div and create new paragraph
+            let newStorageGrass;
             switch (info[0]) {
                 case "grass":
-                    const newStorageGrass = foods[0].update(currentConsumption);
+                    newStorageGrass = foods[0].update(currentConsumption);
                     console.log(newStorageGrass);
                     foods[0] = ["grass", newStorageGrass];
                     console.log(foods[0]);

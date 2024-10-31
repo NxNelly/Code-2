@@ -10,13 +10,16 @@ var Farm;
             this.consumption = _consumption;
         }
         sing() {
-            console.log(this.name, this.sound = this.sound);
+            const d = document.getElementById("sing");
+            const p = document.createElement("p");
+            p.textContent = " Old MacDonald had a farm " + this.sound + this.sound + this.sound;
+            d === null || d === void 0 ? void 0 : d.appendChild(p);
+            console.log(this.sound);
         }
         eat() {
             const d = document.getElementById("eat");
             const p = document.createElement("p");
             p.textContent = this.name + " the " + this.type + " is eating " + this.consumption + " units of " + this.food;
-            //p.textContent = " Food left in storage : ";// move to main
             d === null || d === void 0 ? void 0 : d.appendChild(p);
             return [this.food, this.consumption];
         }

@@ -17,15 +17,18 @@ namespace Farm {
         }
 
         sing(): void {
-            console.log(this.name, this.sound = this.sound)
+            const d: HTMLElement = document.getElementById("sing")!;
+            const p: HTMLElement = document.createElement("p");
+            p.textContent = " Old MacDonald had a farm " + this.sound + this.sound + this.sound;
+            d?.appendChild(p);
+            console.log(this.sound);
 
         }
 
         eat(): [string, number] {
-            const d: HTMLElement = document.getElementById("eat");
+            const d: HTMLElement = document.getElementById("eat")!;
             const p: HTMLElement = document.createElement("p");
             p.textContent = this.name + " the " + this.type + " is eating " + this.consumption + " units of " + this.food;
-            //p.textContent = " Food left in storage : ";// move to main
             d?.appendChild(p);
 
             return [this.food, this.consumption]
