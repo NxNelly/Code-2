@@ -50,7 +50,8 @@ namespace Asteroid_Project {
     function breakAsteroid(_asteroid: Asteroid): void {
         if (_asteroid.size > 0.3) {
             for (let i: number = 0; i < 2; i++) {
-                const fragment: Asteroid = new Asteroid(_asteroid.size / 2, _asteroid.position);
+                const position: Vector = _asteroid.position.copy();
+                const fragment: Asteroid = new Asteroid(_asteroid.size / 2, position);
                 fragment.velocity.add(_asteroid.velocity);
                 asteroids.push(fragment);
             }

@@ -38,7 +38,8 @@ var Asteroid_Project;
     function breakAsteroid(_asteroid) {
         if (_asteroid.size > 0.3) {
             for (let i = 0; i < 2; i++) {
-                const fragment = new Asteroid_Project.Asteroid(_asteroid.size / 2, _asteroid.position);
+                const position = _asteroid.position.copy();
+                const fragment = new Asteroid_Project.Asteroid(_asteroid.size / 2, position);
                 fragment.velocity.add(_asteroid.velocity);
                 asteroids.push(fragment);
             }

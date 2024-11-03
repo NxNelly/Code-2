@@ -33,5 +33,11 @@ namespace Asteroid_Project {
             this.scale(length);
         }
 
+        copy(): Vector {
+            const vectorCopy: Vector = new Vector(this.x, this.y);
+            return vectorCopy;
+        }
+
+
     }
 }
