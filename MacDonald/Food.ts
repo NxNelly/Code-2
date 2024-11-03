@@ -9,8 +9,8 @@ namespace Farm {
         }
 
         update(_currentConsumption: number): number {
-            let newStorage: number = this.storage - _currentConsumption;
-            return newStorage;
+            this.storage = this.storage - _currentConsumption;
+            return this.storage;
 
         }
     }

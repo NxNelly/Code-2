@@ -26,3 +26,4 @@ var Farm;
     }
     Farm.Animal = Animal;
 })(Farm || (Farm = {}));
+//# sourceMappingURL=Animal.js.map

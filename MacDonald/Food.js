@@ -7,9 +7,10 @@ var Farm;
             this.storage = _storage;
         }
         update(_currentConsumption) {
-            let newStorage = this.storage - _currentConsumption;
-            return newStorage;
+            this.storage = this.storage - _currentConsumption;
+            return this.storage;
         }
     }
     Farm.Food = Food;
 })(Farm || (Farm = {}));
+//# sourceMappingURL=Food.js.map
