@@ -41,8 +41,8 @@ var Asteroid_Project;
             Asteroid_Project.crc2.restore();
         }
         isHit(_hotspot) {
-            let hitsize = 50 * this.size;
-            let difference = new Asteroid_Project.Vector(_hotspot.x - this.position.x, _hotspot.y - this.position.y);
+            const hitsize = 50 * this.size;
+            const difference = new Asteroid_Project.Vector(_hotspot.x - this.position.x, _hotspot.y - this.position.y);
             return (Math.abs(difference.x) < hitsize && Math.abs(difference.y) < hitsize);
         }
     }

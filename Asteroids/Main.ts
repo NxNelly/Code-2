@@ -34,8 +34,8 @@ namespace Asteroid_Project {
         console.log("shoot Laser");
         const hotspot: Vector = new Vector(_event.clientX - crc2.canvas.offsetLeft, _event.clientY - crc2.canvas.offsetTop);
         const asteroidHit: Asteroid | null = getAsteroidid(hotspot);
-        //if (asteroidHit) 
-        //    breakAsteroid(asteroidHit);
+        if (asteroidHit)
+            breakAsteroid(asteroidHit);
 
     }
 
@@ -45,16 +45,14 @@ namespace Asteroid_Project {
                 return asteroid;
         }
         return null;
-
     }
 
     function breakAsteroid(_asteroid: Asteroid): void {
-        if (asteroids.size > 0.3) {
+        if (_asteroid.size > 0.3) {
             for (let i: number = 0; i < 2; i++) {
                 const fragment: Asteroid = new Asteroid(_asteroid.size / 2, _asteroid.position);
                 fragment.velocity.add(_asteroid.velocity);
                 asteroids.push(fragment);
-
             }
         }
 

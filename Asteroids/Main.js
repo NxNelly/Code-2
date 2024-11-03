@@ -25,8 +25,8 @@ var Asteroid_Project;
         console.log("shoot Laser");
         const hotspot = new Asteroid_Project.Vector(_event.clientX - Asteroid_Project.crc2.canvas.offsetLeft, _event.clientY - Asteroid_Project.crc2.canvas.offsetTop);
         const asteroidHit = getAsteroidid(hotspot);
-        //if (asteroidHit) 
-        //    breakAsteroid(asteroidHit);
+        if (asteroidHit)
+            breakAsteroid(asteroidHit);
     }
     function getAsteroidid(_hotspot) {
         for (const asteroid of asteroids) {
@@ -36,7 +36,7 @@ var Asteroid_Project;
         return null;
     }
     function breakAsteroid(_asteroid) {
-        if (asteroids.size > 0.3) {
+        if (_asteroid.size > 0.3) {
             for (let i = 0; i < 2; i++) {
                 const fragment = new Asteroid_Project.Asteroid(_asteroid.size / 2, _asteroid.position);
                 fragment.velocity.add(_asteroid.velocity);
